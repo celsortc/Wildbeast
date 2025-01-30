@@ -6,13 +6,15 @@
   grid-template:
   /* como fica os lugares,  */
     /* nomes podem ser qualquer, e na frente o tamanho da LINHA */
-    "logo nav nav" 50px 
+    "logo nav nav" 50px
     "sidenav content advert" 150px
     "sidenav content advert" 100px
-    / 100px 1fr 50px; tamanho das colunas
+    / 100px 1fr 50px;
+  /* tamanho das colunas */
 }
 
 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }

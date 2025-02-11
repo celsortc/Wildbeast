@@ -14,7 +14,7 @@
 }
 
 .calculadora {
-  /* border: 1px solid black; */
+  border: 1px solid rgb(182, 182, 182);
   display: grid;
   grid-template-columns: repeat(4, 55px);
   grid-template-rows: minmax(50px, auto);
@@ -22,7 +22,7 @@
   gap: 5px;
   padding: 5px;
   /* width: 300px; */
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 button {
@@ -37,6 +37,9 @@ button {
 button:hover {
   background-color: aqua;
   cursor: pointer;
+}
+button:active {
+  background-color: rgb(0, 146, 146);
 }
 
 /* .igual {
@@ -58,7 +61,16 @@ button:hover {
 .igual {
   background-color: rgb(99, 172, 201);
 }
+.igual:hover {
+  background-color: rgb(108, 213, 255);
+}
+.igual:active {
+  background-color: rgb(45, 109, 134);
+}
 
 .operadores {
-  background-color: #e6e6e6;
+  background-color: #c9c9c9;
+}
+.operadores:hover {
+  background-color: #ffd900;
 }

@@ -74,3 +74,32 @@ button:active {
 .operadores:hover {
   background-color: #ffd900;
 }
+
+.testejus-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.testejus {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
+  grid-template-rows: 100px;
+  gap: 5px;
+  padding: 10px;
+  max-width: 300px;
+  max-width: 300px;
+  border: 1px solid black;
+
+  align-items: center;
+}
+
+.botao {
+  background-color: orangered;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.botao1 {
+  align-self: start;
+}

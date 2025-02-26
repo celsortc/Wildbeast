@@ -54,7 +54,8 @@ img {
     grid-template-areas:
       "header"
       "sidenav"
-      "sidenav"
+      "content"
+      "anuncios"
       "footer";
   }
 }
@@ -98,6 +99,21 @@ img {
   margin-left: 30px;
 }
 
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: auto;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .header nav a {
+    font-size: 1rem;
+  }
+  .header li + li {
+    margin-left: 10px;
+  }
+}
+
 /* SIDENAV */
 
 .sidenav {
@@ -120,6 +136,45 @@ img {
 .sidenav li a:hover {
   background: #b07dfb;
   transition: 0.1s ease-out;
+}
+
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidenav ul {
+    display: flex;
+  }
+  .sidenav li {
+    /* flex: 1 0 60px; */
+  }
+  .sidenav {
+    position: relative;
+    padding: 0 30px;
+    overflow-x: auto;
+    /* overflow quebra o container, criando scroll lateral nos itens, e não na pagina*/
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* essas duas opções melhoram a experiência no mobile */
+  }
+  .sidenav::after {
+    content: "→";
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.3);
+    animation: seta 0.5s ease-in 0s infinite alternate;
+    /* animação que criamos, tempo que leva a animação, easein, começa a partir de 0s, infinito, alternate faz animação ir e voltar, e não recomeçar bruscamente */
+  }
+  .sidenav li a {
+    margin: 30px 30px 30px 0;
+  }
 }
 
 /* CONTENT */
@@ -145,6 +200,12 @@ img {
 
 .imagem-2 {
   align-self: end;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
 }
 
 /* Estilos content */
@@ -261,6 +322,8 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* auto-fit faz ate o 150, se nao tiver pode aumentar, de acordo com o que tem de conteudo */
 }
 
 /* FOOTER */

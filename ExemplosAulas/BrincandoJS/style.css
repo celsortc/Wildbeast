@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elemento {
+  font-size: 6rem;
+}

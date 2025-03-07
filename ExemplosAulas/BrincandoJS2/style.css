@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+
+label {
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 4px;
+  border: 1px solid;
+
+  align-items: center;
+
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.teste {
+  display: flex;
+  align-items: center;
+}
